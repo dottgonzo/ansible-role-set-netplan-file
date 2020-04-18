@@ -1,0 +1,12 @@
+---
+- name: Set Netplan Config
+  copy:
+    dest: "{{netplan_config_file}}"
+    content: "{{netplan_configuration}}"
+    owner: root
+    group: root
+    mode: "-rw-r--r--"
+  notify: 
+    - apply netplan
+
+

@@ -10,3 +10,4 @@
     - apply netplan
   when:
     - netplan_config_file is defined
+    - netplan_configuration is defined
